@@ -264,7 +264,7 @@ int main(void)
 				uart_busy = 1;
 				pcm_ready = 0;
 				//sprintf(uart_tx_buffer, "%d\n", 500);
-				Format_PCM_For_Plotter(pcm_tx_buffer, AUDIO_BUFFER_SIZE_PCM);
+				//Format_PCM_For_Plotter(pcm_tx_buffer, AUDIO_BUFFER_SIZE_PCM);
 				//HAL_UART_Transmit_DMA(&huart2, (uint8_t*)uart_tx_buffer, strlen(uart_tx_buffer));
 				HAL_UART_Transmit_DMA(&huart2, (uint8_t*)audioBufferPCM,AUDIO_BUFFER_SIZE_PCM * sizeof(int16_t));
 				HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12,GPIO_PIN_SET);
